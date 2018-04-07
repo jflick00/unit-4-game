@@ -18,7 +18,10 @@
     
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
 
 </head>
 
@@ -52,9 +55,9 @@
 
         <div class="row">
             <div class="col-xs-3">
-                <div class="panel panel-default">
+                <div class="panel panel-default random-panel">
                     <div class="panel-body">
-                    <span id="totalRandNum">0</span>
+                    <span id="totalRandNum"></span>
                     </div>
                 </div>
             </div>
@@ -62,6 +65,7 @@
             <div class="col-xs-3">
                 <div class="panel panel-default">
                     <div class="panel-body">
+                        <div id="outcome"></div>
                         <h3>Wins: <span id=wins>0</span></h3>
                         <h3>Losses: <span id=losses>0</span></h3> 
                     </div>
@@ -71,26 +75,34 @@
 
         <div class="row">
             <div class="col-xs-3">
-                <a class="thumbnail red" style="cursor:pointer">
-                    <img src="assets/images/ruby.png" alt="Red">
+                <a class="thumbnail" style="cursor:pointer">
+                    <div id="red">
+                        <img src="assets/images/ruby.png" data-crystalValue="" alt="Red">
+                    </div>
                 </a>
             </div>
 
             <div class="col-xs-3">
-                <a class="thumbnail blue" style="cursor:pointer">
-                    <img src="assets/images/diamond.png" alt="Blue">
+                <a class="thumbnail" style="cursor:pointer">
+                    <div id="blue">
+                        <img src="assets/images/diamond.png" data-crystalValue="" alt="Blue">
+                    </div>
                 </a>
             </div>
 
             <div class="col-xs-3">
-                <a class="thumbnail yellow" style="cursor:pointer">
-                    <img src="assets/images/yellowcrystal.png" alt="Yellow">
+                <a class="thumbnail" style="cursor:pointer">
+                    <div id="yellow">
+                        <img src="assets/images/yellowcrystal.png" data-crystalValue="" alt="Yellow">
+                    </div>
                 </a>
             </div>
 
             <div class="col-xs-3">
-                <a class="thumbnail green" style="cursor:pointer">
-                    <img src="assets/images/emerald.jpg" alt="Green">
+                <a class="thumbnail" style="cursor:pointer">
+                    <div id="green">
+                        <img src="assets/images/emerald.jpg" data-crystalValue="" alt="Green">
+                    </div>
                 </a>
             </div>
         </div>
@@ -117,8 +129,11 @@
 
     </div>
 
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <!-- Link to Javascript -->
-    <script src="assets/javascript/game.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </body>
 

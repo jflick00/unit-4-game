@@ -8,6 +8,10 @@ body {
     border: 5px dashed #b761f9;
 }
 
+.body-panel {
+    background-color: #bfbfbf;
+}
+
 h1 {
     font-family: 'Shrikhand', cursive;
     font-size: 50px;
@@ -15,11 +19,7 @@ h1 {
 }
 
 h3 {
-
-}
-
-.body-panel {
-    background-color: #bfbfbf;
+    font-family: 'Anton', sans-serif;
 }
 
 p {
@@ -30,14 +30,16 @@ p {
 .thumbnail {
     border: 4px solid #463a3a;
 }
-.thumbnail>img {
+
+img {
     height: 150px;
+    width: 100%;
 }
 
 #totalRandNum {
-    font-size: 30px;
+    font-size: 72px;
 }
 
 #userTotal {
-    font-size: 30px;
+    font-size: 72px;
 }
