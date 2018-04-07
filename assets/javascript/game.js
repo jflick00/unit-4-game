@@ -13,36 +13,46 @@ $(document).ready(function() {
 
     var wins = 0;
     var losses = 0;
-
-
-
+    
 //  FUNCTIONS
 //==============================================================================
 
     function startGame() {
         totalRandNum = Math.floor(Math.random() * 101) + 19;
         $("#totalRandNum").text(totalRandNum);
-        console.log("this is total random number " + totalRandNum)
         userTotal = 0;
+        $("#userTotal").text(userTotal);
 
         red = Math.floor(Math.random() * 12) + 1;
-        redData = $("#red").attr("data-crystalValue", red);
-        console.log(redData[0].attributes[1]);
+        $("#red").attr("data-crystalValue", red);
         
         blue = Math.floor(Math.random() * 12) + 1;
         $("#blue").attr("data-crystalValue", blue);
-        console.log("this is blue number " + blue);
         
         yellow = Math.floor(Math.random() * 12) + 1;
         $("#yellow").attr("data-crystalValue", yellow);
-        console.log("this is yellow number " + yellow);
         
         green = Math.floor(Math.random() * 12) + 1;
         $("#green").attr("data-crystalValue", green);
-        console.log("this is green number " + green);
-        
     }
 
+    function checkOutcome() {
+        console.log(userTotal);
+        console.log(totalRandNum);
+        if (userTotal === totalRandNum) {
+            $("#outcome").text("You Win!");
+            wins++;
+            document.getElementById("wins").innerHTML = wins;
+            startGame();
+        }
+    
+        else if (userTotal > totalRandNum) {
+            $("#outcome").text("You Lose!");
+            losses++;
+            document.getElementById("losses").innerHTML = losses;
+            startGame();
+        }
+    }
 //  MAIN PROCESS
 //==============================================================================
 
@@ -50,29 +60,28 @@ $(document).ready(function() {
     startGame();
 
     $("body").on("click", "#red", function() {
-        document.getElementById("userTotal").innerHTML = red;
+        $("#outcome").text(" ");
+        userTotal = userTotal + red;
+        document.getElementById("userTotal").innerHTML = userTotal;
+        checkOutcome();
     })
-
     $("body").on("click", "#blue", function() {
-        document.getElementById("userTotal").innerHTML = blue;
+        $("#outcome").text(" ");
+        userTotal = userTotal + blue;
+        document.getElementById("userTotal").innerHTML = userTotal;
+        checkOutcome();
     })
     $("body").on("click", "#yellow", function() {
-        document.getElementById("userTotal").innerHTML = yellow;
+        $("#outcome").text(" ");
+        userTotal = userTotal + yellow;
+        document.getElementById("userTotal").innerHTML = userTotal;
+        checkOutcome();
     })
     $("body").on("click", "#green", function() {
-        document.getElementById("userTotal").innerHTML = green;
+        $("#outcome").text(" ");
+        userTotal = userTotal + green;
+        document.getElementById("userTotal").innerHTML = userTotal;
+        checkOutcome();
     })    
 
-        if (userTotal === totalRandNum) {
-            $("#outcome").text("You Win!");
-            wins++;
-            startgame();
-        }
-
-        else if (userTotal >= totalRandNum) {
-            $("#outcome").text("You Lose!");
-            losses++;
-            startgame();
-        }
-   
 });
