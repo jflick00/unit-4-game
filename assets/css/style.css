@@ -31,9 +31,13 @@ p {
     border: 4px solid #463a3a;
 }
 
-img {
+.thumbnail>img {
     height: 150px;
     width: 100%;
+}
+
+a:hover {
+    border-color: #ffffff;
 }
 
 #totalRandNum {
