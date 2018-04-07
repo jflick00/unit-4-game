@@ -2,6 +2,12 @@ body {
     background: url("../images/close-up-hardwood-lumber.jpg");
 }
 
+
+.main-panel {
+    margin-top: 20px;
+    border: 5px dashed #b761f9;
+}
+
 h1 {
     font-family: 'Shrikhand', cursive;
     font-size: 50px;
@@ -12,10 +18,18 @@ h3 {
 
 }
 
-p {
-    font-weight: bolder;
+.body-panel {
+    background-color: #bfbfbf;
 }
 
+p {
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.thumbnail {
+    border: 4px solid #463a3a;
+}
 .thumbnail>img {
     height: 150px;
 }
