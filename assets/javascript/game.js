@@ -37,8 +37,6 @@ $(document).ready(function() {
     }
 
     function checkOutcome() {
-        console.log(userTotal);
-        console.log(totalRandNum);
         if (userTotal === totalRandNum) {
             $("#outcome").text("You Win!");
             wins++;
@@ -55,7 +53,6 @@ $(document).ready(function() {
     }
 //  MAIN PROCESS
 //==============================================================================
-
 
     startGame();
 

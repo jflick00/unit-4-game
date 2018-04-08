@@ -2,7 +2,6 @@ body {
     background: url("../images/close-up-hardwood-lumber.jpg");
 }
 
-
 .main-panel {
     margin-top: 20px;
     border: 5px dashed #b761f9;
@@ -39,10 +38,6 @@ p {
 .thumbnail>img {
     height: 150px;
     width: 100%;
-}
-
-a:hover {
-    border-color: #ffffff;
 }
 
 #totalRandNum {
